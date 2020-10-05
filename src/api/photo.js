@@ -1,11 +1,16 @@
-import $ from 'jquery';
+import axios from 'axios';
+import jsonpAdapter from 'axios-jsonp';
 
 const FLICKER_API = 'http://api.flickr.com/services/feeds/photos_public.gne';
 
 export const getPhotosByTags = (tags) => {
-  const url = `${FLICKER_API}?jsoncallback=?`;
-  return $.getJSON(url, {
-    tags: tags,
-    format: 'json',
+  return axios({
+    url: FLICKER_API,
+    params: {
+      tags,
+      format: 'json',
+    },
+    adapter: jsonpAdapter,
+    callbackParamName: 'jsoncallback',
   });
 };

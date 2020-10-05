@@ -10,19 +10,17 @@ const PhotoProvider = (props) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const searchPhotos = (tags) => {
-    setLoading(true);
-    getPhotosByTags(tags)
-      .done(function (data) {
-        setPhotos(data.items);
-      })
-      .fail(function () {
-        setMessage('Failed to fetch photos');
-        setPhotos([]);
-      })
-      .always(function () {
-        setLoading(false);
-      });
+  const searchPhotos = async (tags) => {
+    try {
+      setLoading(true);
+      const response = await getPhotosByTags(tags);
+      setPhotos(response.data.items);
+    } catch (err) {
+      setMessage('Failed to fetch photos');
+      setPhotos([]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const resetMessage = () => {

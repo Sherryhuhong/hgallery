@@ -1,0 +1,43 @@
+@import "../../../../scss/variables";
+
+.modalTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.modalPhoto {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.button {
+  background-color: $color-primary !important;
+  border-color: $color-primary !important;
+  margin-bottom: $general-padding/2;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.detail {
+  margin-bottom: $general-padding/2;
+}
+
+.detail {
+  i {
+    opacity: 0.8;
+    font-size: 0.8em;
+    margin-right: $general-padding/2;
+  }
+}
+
+.small {
+  span {
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+}

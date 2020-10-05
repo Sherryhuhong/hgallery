@@ -7,7 +7,6 @@ export default function Message() {
   const { message, resetMessage } = useContext(PhotoContext);
 
   useEffect(() => {
-    console.log(message);
     if (message) {
       setShow(true);
     }
