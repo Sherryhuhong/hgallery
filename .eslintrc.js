@@ -14,6 +14,7 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   rules: {
-      "react/prop-types": 1
+      "react/prop-types":"warn",
+      "no-console":"warn"
   }
 }
