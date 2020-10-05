@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { PhotoContext } from '../../../../context/PhotoContext';
-import InputGroup from 'react-bootstrap/InputGroup';
+import React, { useContext, useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
-
+import InputGroup from 'react-bootstrap/InputGroup';
+import { PhotoContext } from '../../../../context/PhotoContext';
 import styles from './index.module.scss';
+
 
 export default function SearchInput() {
   const { searchPhotos } = useContext(PhotoContext);
