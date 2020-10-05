@@ -8,6 +8,7 @@ const PhotoProvider = (props) => {
   const { children } = props;
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
   const searchPhotos = (tags) => {
     setLoading(true);
@@ -16,7 +17,7 @@ const PhotoProvider = (props) => {
         setPhotos(data.items);
       })
       .fail(function () {
-        console.log('Failed to fetch photos');
+        setMessage('Failed to fetch photos');
         setPhotos([]);
       })
       .always(function () {
@@ -24,8 +25,14 @@ const PhotoProvider = (props) => {
       });
   };
 
+  const resetMessage = () => {
+    setMessage('');
+  };
+
   return (
-    <PhotoContext.Provider value={{ photos, loading, searchPhotos }}>
+    <PhotoContext.Provider
+      value={{ photos, loading, searchPhotos, message, resetMessage }}
+    >
       {children}
     </PhotoContext.Provider>
   );

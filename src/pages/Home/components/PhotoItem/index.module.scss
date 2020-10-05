@@ -42,7 +42,7 @@ $photo-height: 250px;
     width: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to top, rgba($color-black, 0.6) 20%, rgba($color-black, 0.2) 100% );
+    background: linear-gradient(to top, rgba($color-black, 0.6) 20%, rgba($color-black, 0.2) 100%);
     z-index: 1;
     opacity: 0;
     transition: $transition;
@@ -74,8 +74,8 @@ $photo-height: 250px;
 }
 
 .button {
-  background-color: $color-primary!important;
-  border-color: $color-primary!important;
+  background-color: $color-primary !important;
+  border-color: $color-primary !important;
   margin-bottom: $general-padding/2;
   &:hover {
     opacity: 0.8;
@@ -86,7 +86,8 @@ $photo-height: 250px;
   margin-bottom: $general-padding/2;
 }
 
-.photoItem, .detail{
+.photoItem,
+.detail {
   i {
     opacity: 0.8;
     font-size: 0.8em;
@@ -94,9 +95,8 @@ $photo-height: 250px;
   }
 }
 
-
-.small{
-  span{
+.small {
+  span {
     font-size: 0.8em;
     opacity: 0.8;
   }

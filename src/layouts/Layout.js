@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import PageHeader from '../components/PageHeader';
+import Message from '../components/Message';
 
 export default function Layout(props) {
   const { children } = props;
@@ -8,6 +9,7 @@ export default function Layout(props) {
     <Fragment>
       <PageHeader />
       {children}
+      <Message />
     </Fragment>
   );
 }
