@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+.loading {
+  text-align: center;
+  i {
+    font-size: 3em;
+    color: $color-primary;
+  }
+}

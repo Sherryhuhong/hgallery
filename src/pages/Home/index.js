@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { PhotoContext } from '../../context/PhotoContext';
+import Container from 'react-bootstrap/Container';
 import Loader from '../../components/Loader';
+import { PhotoContext } from '../../context/PhotoContext';
 import Layout from '../../layouts/Layout';
-import PhotoList from './components/PhotoList';
 import Banner from './components/Banner';
+import PhotoList from './components/PhotoList';
 
 export default function Home() {
   const { loading } = useContext(PhotoContext);
@@ -11,7 +12,9 @@ export default function Home() {
   return (
     <Layout>
       <Banner />
-      {loading ? <Loader /> : <PhotoList />}
+      <Container className="my-5">
+        {loading ? <Loader /> : <PhotoList />}
+      </Container>
     </Layout>
   );
 }

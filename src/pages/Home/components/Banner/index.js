@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchInput from './SearchInput';
-import styles from './Banner.module.scss';
-import backgroundImage from '../../../assets/banner-bg.jpg';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import backgroundImage from '../../../../assets/banner-bg.jpg';
+import SearchInput from '../SearchInput';
+import styles from './index.module.scss';
 
 export default function Banner() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import RouterMap from './router';
 import PhotoProvider from './context/PhotoContext';
+import RouterMap from './router';
 
 function App() {
   return (

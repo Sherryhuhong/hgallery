@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import PageHeader from '../components/PageHeader';
 
@@ -10,3 +11,7 @@ export default function Layout(props) {
     </Fragment>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

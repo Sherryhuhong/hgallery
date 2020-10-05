@@ -1,0 +1,11 @@
+@import "../../scss/variables";
+.infoWrapper{
+  height: 100vh;
+}
+
+.info{
+  h1{
+    color:$color-primary;
+    margin-top: $general-padding * 4;
+  }
+}

@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { PhotoContext } from '../../../context/PhotoContext';
+import { PhotoContext } from '../../../../context/PhotoContext';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 
-import styles from './SearchInput.module.scss';
+import styles from './index.module.scss';
 
 export default function SearchInput() {
   const { searchPhotos } = useContext(PhotoContext);
@@ -18,11 +18,6 @@ export default function SearchInput() {
   }, [searchQuery]);
 
   return (
-    // <div className={styles.search}>
-    //   <span className={styles.searchIcon}><i className="fa fa-search"></i></span>
-    //   <input type="text" onChange={(e) => setSearchQuery(e.target.value)} className={`form-control ${styles.searchInput}`} placeholder="Search for photos" />
-    // </div>
-
     <InputGroup className="mb-3">
       <InputGroup.Prepend>
         <InputGroup.Text id="search-icon">

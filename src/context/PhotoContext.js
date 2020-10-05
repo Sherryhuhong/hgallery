@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { createContext, useState } from 'react';
 import { getPhotosByTags } from '../api/photo';
 
 export const PhotoContext = createContext();

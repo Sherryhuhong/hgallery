@@ -1,0 +1,103 @@
+@import "../../../../scss/variables";
+
+$photo-height: 250px;
+
+.photoItem {
+  padding-left: $general-padding/2 !important;
+  padding-right: $general-padding/2 !important;
+  margin-bottom: $general-padding;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition;
+  }
+
+  &:hover {
+    .photoWrapper:after {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.15);
+    }
+
+    .photoInfo {
+      opacity: 1;
+    }
+  }
+}
+
+.photoWrapper {
+  position: relative;
+  overflow: hidden;
+  height: $photo-height;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba($color-black, 0.6) 20%, rgba($color-black, 0.2) 100% );
+    z-index: 1;
+    opacity: 0;
+    transition: $transition;
+  }
+}
+
+.photoInfo {
+  padding: $general-padding/4;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  color: $color-white;
+  z-index: 100;
+  transition: $transition;
+}
+
+.modalTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.modalPhoto {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.button {
+  background-color: $color-primary!important;
+  border-color: $color-primary!important;
+  margin-bottom: $general-padding/2;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.detail {
+  margin-bottom: $general-padding/2;
+}
+
+.photoItem, .detail{
+  i {
+    opacity: 0.8;
+    font-size: 0.8em;
+    margin-right: $general-padding/2;
+  }
+}
+
+
+.small{
+  span{
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+}
