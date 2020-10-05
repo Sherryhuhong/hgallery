@@ -11,7 +11,7 @@ const PhotoProvider = (props) => {
 
   const searchPhotos = (tags) => {
     setLoading(true);
-    getPhotosByTags()
+    getPhotosByTags(tags)
       .done(function (data) {
         setPhotos(data.items);
       })
