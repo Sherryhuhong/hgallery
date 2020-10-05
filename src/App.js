@@ -1,10 +1,13 @@
 import React from 'react';
 import RouterMap from './router';
+import PhotoProvider from './context/PhotoContext';
 
 function App() {
   return (
     <div className="App">
-      <RouterMap />
+      <PhotoProvider>
+        <RouterMap />
+      </PhotoProvider>
     </div>
   );
 }

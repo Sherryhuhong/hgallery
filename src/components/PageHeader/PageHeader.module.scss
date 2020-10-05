@@ -1,0 +1,10 @@
+$logo-max-height: 30px;
+
+.logoWrapper{
+    line-height: 1!important;
+}
+
+.logo{
+  max-height: $logo-max-height;
+  width:auto;
+}

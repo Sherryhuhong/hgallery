@@ -1,0 +1,17 @@
+$color-primary: #62b6cb;
+$color-white: #fff;
+$color-border: #ced4da;
+$color-placeholder: #bbb;
+
+.searchInput {
+  &:focus {
+    outline: 0 none !important;
+    box-shadow: none !important;
+    border-color: $color-border !important;
+  }
+  &::placeholder {
+    color: $color-placeholder !important;
+    opacity: 1; 
+  }
+}
+
